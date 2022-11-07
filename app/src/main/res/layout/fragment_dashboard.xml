@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <TextView
+            android:id="@+id/tv_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:text="@string/dashboard"
+            android:textColor="@color/text_bg"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:cardBackgroundColor="@color/color_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dashboard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_vert_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_horz_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.15" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_horz_85"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.85" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:text="@string/categories"
+                    android:textColor="@color/text_main"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/gl_horz_15"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:text="@string/categories"
+                    android:textColor="@color/text_main"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/gl_horz_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/food"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toTopOf="@+id/gl_horz_15" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/home"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_food" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/travel"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_home" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/salary"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_travel" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/health"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_salary" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/education"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_health" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_groceries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/groceries"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_education" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_entertainment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/entertainment"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_groceries" />
+
+                <TextView
+                    android:id="@+id/tv_dash_res_miscellaneous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/miscellaneous"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_entertainment" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/food"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/gl_horz_15" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/home"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_food" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/travel"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_home" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/salary"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_travel" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/health"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_salary" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/education"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_health" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_groceries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/groceries"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_education" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_entertainment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/entertainment"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_groceries" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard_miscellaneous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="8dp"
+                    android:text="@string/miscellaneous"
+                    android:textColor="@color/text_main"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/gl_vert_50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dashboard_entertainment" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
